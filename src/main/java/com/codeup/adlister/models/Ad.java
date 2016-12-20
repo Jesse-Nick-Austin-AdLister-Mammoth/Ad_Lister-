@@ -5,12 +5,22 @@ public class Ad {
     private long userId;
     private String title;
     private String description;
+    private String imgPath;
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
 
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
+
     }
 
     public Ad(long userId, String title, String description) {
