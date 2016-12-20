@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <jsp:include page="partials/head.jsp">
@@ -9,6 +10,9 @@
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
         <h1>Please fill in your information.</h1>
+        <c:if test="${sessionScope.usernameTaken == true}">
+            <div id="username-taken" class="alert alert-danger">That username was already taken.</div>
+        </c:if>
         <form action="/register" data-toggle="validator" method="post">
             <div id="username-form-group" class="form-group">
                 <label for="username">Username</label>

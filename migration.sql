@@ -21,5 +21,7 @@ CREATE TABLE ads (
     imgpath VARCHAR(255),
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
-        ON DELETE CASCADE
-);
+        ON DELETE CASCADE);
+
+
+
