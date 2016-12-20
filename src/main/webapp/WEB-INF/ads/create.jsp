@@ -5,6 +5,8 @@
         <jsp:param name="title" value="Create a new Ad" />
     </jsp:include>
 </head>
+<script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
+
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
@@ -19,8 +21,26 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
-            <input type="submit" class="btn btn-block btn-primary">
+            <div id="filepicker">Pick file</div>
+            <input type="hidden" name="fileurl" id="fileurl">
+            <input id="submit" type="submit" class="btn btn-block btn-primary">
         </form>
     </div>
+<script type="text/javascript">
+    filepicker.setKey("AFBrFHPurTte7wKazwLQzz");
+    document.getElementById("filepicker").addEventListener("click", function(){
+        filepicker.pick(
+            {mimetype: 'image/*'},
+            function(Blob){
+                console.log(Blob.url);
+                document.getElementById("fileurl").value = Blob.url;
+            },
+            function(FPError){
+                console.log(FPError.toString());
+            });
+    });
+//    document.getElementById("submit").addEventListener("click", function(){
+//    })
+</script>
 </body>
 </html>

@@ -5,14 +5,11 @@ public class Ad {
     private long userId;
     private String title;
     private String description;
-    private String imgPath;
+    private String url;
 
-    public String getImgPath() {
-        return imgPath;
-    }
 
-    public void setImgPath(String imgPath) {
-        this.imgPath = imgPath;
+    public String getUrl() {
+        return url;
     }
 
     public Ad(long id, long userId, String title, String description) {
@@ -20,7 +17,13 @@ public class Ad {
         this.userId = userId;
         this.title = title;
         this.description = description;
+    }
 
+    public Ad(long userId, String title, String description, String url) {
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.url = url;
     }
 
     public Ad(long userId, String title, String description) {
