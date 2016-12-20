@@ -15,11 +15,6 @@ public class ListAdsDao implements Ads {
         return ads;
     }
 
-    @Override
-    public List<Ad> userAll(long userId) { // used to display user ads on user profile
-        return null;
-    }
-
     public Long insert(Ad ad) {
         // make sure we have ads
         if (ads == null) {
@@ -33,9 +28,15 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
-    public Object singleAd(int adID) {
+    public List<Ad> userAll(long userId) {
         return null;
     }
+
+    @Override
+    public Ad singleAd(int adId) {
+        return null;
+    }
+
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
