@@ -39,7 +39,7 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    public List<Ad> userAll(String username) {
+    public List<Ad> userAll(String username) { // used to display user ads on user profile
         PreparedStatement stmt = null;
         try {
             stmt = connection.prepareStatement("SELECT * FROM ads WHERE username = ?;");

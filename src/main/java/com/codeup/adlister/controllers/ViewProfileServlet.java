@@ -23,6 +23,7 @@ public class ViewProfileServlet extends HttpServlet {
     protected void doPost (HttpServletRequest request, HttpServletResponse response) {
         String username = request.getParameter("username");
     }
+
 }
 
 
