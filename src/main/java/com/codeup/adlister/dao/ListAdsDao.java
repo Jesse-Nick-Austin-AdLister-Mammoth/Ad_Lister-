@@ -26,6 +26,8 @@ public class ListAdsDao implements Ads {
         ads.add(ad);
         return ad.getId();
     }
+    @Override
+    public List<Ad> search(String searchQuery){return null;}
 
     @Override
     public List<Ad> userAll(long userId) {
