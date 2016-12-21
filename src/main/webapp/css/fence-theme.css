@@ -1,8 +1,18 @@
 body {
     background-color: gray;
+    color: ghostwhite;;
 }
 
-h1 {
+h1#indexHead {
     margin-top: 15%;
     font-size: 5em;
+}
+
+h1#adsIndexHead {
+    font-size: 4em;
+    margin-top: 5%;
+}
+
+.indexAds {
+    font-size: 2em;
 }
