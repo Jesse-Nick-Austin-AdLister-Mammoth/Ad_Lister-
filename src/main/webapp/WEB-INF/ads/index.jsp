@@ -13,8 +13,8 @@
     <h1 id="adsIndexHead">Viewing all items</h1>
     <c:forEach var="ad" items="${ads}">
             <div class="col-md-6 indexAds">
-                <h2><a href="/ads/show?id=${ad.id}">${ad.title}</a></h2>
-                <p>${ad.description}</p>
+                <h2 id="adTitle"><a href="/ads/show?id=${ad.id}">${ad.title}</a></h2>
+                <p id="adDescription">${ad.description}</p>
             </div>
     </c:forEach>
 </div>

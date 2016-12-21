@@ -3,6 +3,10 @@ body {
     color: ghostwhite;;
 }
 
+a {
+    color: lightblue;
+}
+
 h1#indexHead {
     margin-top: 15%;
     font-size: 5em;
@@ -13,6 +17,10 @@ h1#adsIndexHead {
     margin-top: 5%;
 }
 
-.indexAds {
-    font-size: 2em;
+#adTitle {
+    font-size: 2.5em;
+}
+
+#adDescription {
+    font-size: 1.75em;
 }
