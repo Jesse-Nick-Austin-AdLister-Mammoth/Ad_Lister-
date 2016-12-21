@@ -6,17 +6,15 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/ads">Fence</a>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <form action="/search" method="get">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="searchQuery" id="searchQuery" placeholder="Search for...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Go!</button>
+        <form action="/search" method="get" class="navbar-form navbar-left">
+            <div class="input-group">
+                <input type="text" class="form-control" name="searchQuery" id="searchQuery" placeholder="Search for...">
+                <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">Go!</button>
                         </span>
-                    </div>
-                </form>
-            </li>
+            </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
             <c:choose>
                 <c:when test="${sessionScope.user != null}">
                     <li><a href="/ads/create"><span class="glyphicon glyphicon-file"></span> New Ad</a></li>
