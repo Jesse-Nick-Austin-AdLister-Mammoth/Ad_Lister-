@@ -22,7 +22,7 @@
                 <textarea id="description" name="description" class="form-control" type="text" required></textarea>
                 <div id="description-help" class="help-block with-errors"></div>
             </div>
-            <div id="filepicker">Pick file</div>
+            <div id="filepicker" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-picture"></span> Pick file</div>
             <input type="hidden" name="fileurl" id="fileurl">
             <input id="submit" type="submit" data-disable="" class="btn btn-block btn-primary">
         </form>
