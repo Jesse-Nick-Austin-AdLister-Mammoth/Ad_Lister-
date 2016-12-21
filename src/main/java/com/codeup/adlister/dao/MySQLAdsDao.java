@@ -91,7 +91,6 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
-
     @Override
     public Ad singleAd(int adId) {
         PreparedStatement stmt = null;
