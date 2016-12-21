@@ -11,10 +11,8 @@
 <div class="container">
     <div class="col-md-12">
         <div><h2>${ad.title}</h2></div>
-        <div>
-            <img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="200" height="140">
-        </div>
-        <div><p>${ad.description}</p></div>
+        <div><img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="200" height="140"></div>
+        <div class="col-md-6"><p>${ad.description}</p></div>
     </div>
 </div>
 </body>
