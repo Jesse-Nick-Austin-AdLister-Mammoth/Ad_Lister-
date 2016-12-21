@@ -16,8 +16,9 @@
                 <a href="/ads/show?id=${ad.id}">
                     <img style="float: left; margin-right: 5px;" class="img-rounded"
                          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                         alt="Generic placeholder image" width="60" height="60">
-                    <h2 id="adTitle">${ad.title}</h2>
+                         alt="Generic placeholder image" width="50" height="50">
+                    <h2>${ad.title}</h2>
+
                 </a>
             <p id="adDescription">${ad.description}</p>
         </div>
