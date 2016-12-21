@@ -17,9 +17,9 @@
                     <img style="float: left; margin-right: 5px;" class="img-rounded"
                          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
                          alt="Generic placeholder image" width="60" height="60">
-                    <h2>${ad.title}</h2>
+                    <h2 id="adTitle">${ad.title}</h2>
                 </a>
-            <p>${ad.description}</p>
+            <p id="adDescription">${ad.description}</p>
         </div>
 
     </c:forEach>
