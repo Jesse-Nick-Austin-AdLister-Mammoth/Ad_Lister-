@@ -16,15 +16,17 @@
                 <a href="/ads/show?id=${ad.id}">
                     <c:choose>
                         <c:when test='${ad.url != null && ad.url.trim() != ""}'>
-                            <img class="img-rounded" src="${ad.url}" alt="${ad.title}" width="300" height="200">
+                            <img style="float: left; margin-right: 5px;" class="img-rounded" src="${ad.url}" alt="${ad.title}" width="50" height="50">
                         </c:when>
                         <c:otherwise>
-                            <img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="300" height="200">
+                            <img style="float: left; margin-right: 5px;" class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="50" height="50">
                         </c:otherwise>
                     </c:choose>
+
                     <h2>${ad.title}</h2>
+
                 </a>
-            <p>${ad.description}</p>
+            <p id="adDescription">${ad.description}</p>
         </div>
 
     </c:forEach>
