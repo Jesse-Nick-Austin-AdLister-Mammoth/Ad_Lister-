@@ -12,10 +12,15 @@
 <div class="container">
     <h1>Here Are all the ads!</h1>
     <c:forEach var="ad" items="${ads}">
-            <div class="col-md-6">
-                <h2><a href="/ads/show?id=${ad.id}">${ad.title}</a></h2>
-                <p>${ad.description}</p>
-            </div>
+        <div class="col-md-6">
+                <a href="/ads/show?id=${ad.id}">
+                    <img style="float: left; margin-right: 5px;" class="img-rounded"
+                         src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                         alt="Generic placeholder image" width="60" height="60">
+                    <h2>${ad.title}</h2>
+                </a>
+            <p>${ad.description}</p>
+        </div>
     </c:forEach>
 </div>
 
