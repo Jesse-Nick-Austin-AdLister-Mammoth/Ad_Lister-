@@ -1,3 +1,26 @@
 body {
     background-color: gray;
+    color: ghostwhite;;
+}
+
+a {
+    color: lightblue;
+}
+
+h1#indexHead {
+    margin-top: 15%;
+    font-size: 5em;
+}
+
+h1#adsIndexHead {
+    font-size: 4em;
+    margin-top: 5%;
+}
+
+#adTitle {
+    font-size: 2.5em;
+}
+
+#adDescription {
+    font-size: 1.75em;
 }
