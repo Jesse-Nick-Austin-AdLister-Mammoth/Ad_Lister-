@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <link href="<c:url value="fence-theme.css" />" rel="stylesheet">
+    <link href="<c:url value="../fence-theme.css" />" rel="stylesheet">
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="stylesheet" value="fence-theme.css"/>
         <jsp:param name="title" value="Your Profile"/>
