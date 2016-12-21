@@ -18,8 +18,9 @@
                          src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
                          alt="Generic placeholder image" width="50" height="50">
                     <h2>${ad.title}</h2>
+
                 </a>
-            <p>${ad.description}</p>
+            <p id="adDescription">${ad.description}</p>
         </div>
 
     </c:forEach>
