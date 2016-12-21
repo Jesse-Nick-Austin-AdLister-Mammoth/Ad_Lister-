@@ -14,9 +14,14 @@
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
                 <a href="/ads/show?id=${ad.id}">
-                    <img style="float: left; margin-right: 5px;" class="img-rounded"
-                         src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                         alt="Generic placeholder image" width="60" height="60">
+                    <c:choose>
+                        <c:when test='${ad.url != null && ad.url.trim() != ""}'>
+                            <img class="img-rounded" src="${ad.url}" alt="${ad.title}" width="300" height="200">
+                        </c:when>
+                        <c:otherwise>
+                            <img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="300" height="200">
+                        </c:otherwise>
+                    </c:choose>
                     <h2>${ad.title}</h2>
                 </a>
             <p>${ad.description}</p>

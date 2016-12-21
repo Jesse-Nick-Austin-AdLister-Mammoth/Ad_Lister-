@@ -25,7 +25,7 @@ public class CreateAdServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
         Ad ad;
-        if(request.getParameter("fileurl") != null) {
+        if(request.getParameter("fileurl") != null && !request.getParameter("fileurl").equals("")) {
             ad = new Ad(
                     user.getId(),
                     request.getParameter("title"),
