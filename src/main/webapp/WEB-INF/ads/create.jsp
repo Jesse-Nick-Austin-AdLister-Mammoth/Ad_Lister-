@@ -5,8 +5,6 @@
         <jsp:param name="title" value="Create a new Ad" />
     </jsp:include>
 </head>
-<script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
-
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
@@ -26,6 +24,8 @@
             <input id="submit" type="submit" class="btn btn-block btn-primary">
         </form>
     </div>
+
+<script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
 <script type="text/javascript">
     filepicker.setKey("AFBrFHPurTte7wKazwLQzz");
     document.getElementById("filepicker").addEventListener("click", function(){
@@ -39,8 +39,6 @@
                 console.log(FPError.toString());
             });
     });
-//    document.getElementById("submit").addEventListener("click", function(){
-//    })
 </script>
 </body>
 </html>
