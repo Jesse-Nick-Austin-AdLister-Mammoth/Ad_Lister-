@@ -36,7 +36,7 @@
 
                 <div>
                     <button>Delete</button>
-                    <button>Edit</button>
+                    <a class="btn btn-default btn-xs" href="#" role="button">Edit</a>
                 </div>
             </div>
 

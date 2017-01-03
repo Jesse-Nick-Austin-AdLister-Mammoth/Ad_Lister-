@@ -26,7 +26,7 @@
             <c:if test="${sessionScope.user.id == ad.userId}">
                 <div>
                     <button>Delete</button>
-                    <button>Edit</button>
+                    <a class="btn btn-default btn-xs" href="#" role="button">Edit</a>
                 </div>
             </c:if>
         </div>
