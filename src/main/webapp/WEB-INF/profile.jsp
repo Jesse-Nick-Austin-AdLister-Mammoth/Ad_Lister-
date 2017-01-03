@@ -35,7 +35,9 @@
                 <p>${ad.description}</p>
 
                 <div>
-                    <button class="btn btn-danger">Delete</button>
+
+                    <button>Delete</button>
+                    <a class="btn btn-default btn-xs" href="#" role="button">Edit</a>
                 </div>
             </div>
 

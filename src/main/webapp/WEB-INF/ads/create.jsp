@@ -25,7 +25,7 @@
             </div>
             <div id="filepicker" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-picture"></span> Pick file</div>
             <select name="category">
-                <option value="0" disabled>Select a Category</option>
+                <option value="0" selected>Select a Category</option>
                 <c:forEach var="category" items="${categories}" varStatus="loop">
                     <option value="${loop.index + 1}">${category.value}</option>
                 </c:forEach>
