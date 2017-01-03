@@ -11,14 +11,16 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
     <div class="col-md-12">
         <div><h2>${ad.title}</h2></div>
+        <div id="showImage">
         <c:choose>
             <c:when test='${ad.url != null && ad.url.trim() != ""}'>
-                <div><img class="img-rounded" src="${ad.url}" alt="${ad.title}" id="showImage"></div>
+                <img class="img-rounded" src="${ad.url}" alt="${ad.title}">
             </c:when>
             <c:otherwise>
-                <div><img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="300" height="300"></div>
+                <img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="300" height="300">
             </c:otherwise>
         </c:choose>
+        </div>
 
         <div class="col-md-6">
             <p>${ad.description}</p>
