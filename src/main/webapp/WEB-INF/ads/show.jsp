@@ -19,7 +19,7 @@
                 <img class="img-rounded showImage" src="${ad.url}" alt="${ad.title}">
             </c:when>
             <c:otherwise>
-                <img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="300" height="300">
+                <img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image">
             </c:otherwise>
         </c:choose>
         </div>
@@ -33,7 +33,6 @@
                         <input hidden type="text" name="id" value="${ad.id}">
                         <button>Delete</button>
                     </form>
-
                     <a class="btn btn-default btn-xs" href="#" role="button">Edit</a>
                 </div>
             </c:if>
