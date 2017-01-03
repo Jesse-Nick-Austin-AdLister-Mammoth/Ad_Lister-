@@ -39,7 +39,7 @@
                         <input hidden type="text" name="id" value="${ad.id}">
                         <button>Delete</button>
                     </form>
-                    <button>Edit</button>
+                    <a class="btn btn-default btn-xs" href="#" role="button">Edit</a>
                 </div>
             </div>
 
