@@ -35,6 +35,9 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> userDelete(long id) { return null;}
+
+    @Override
     public Ad singleAd(int adId) {
         return null;
     }

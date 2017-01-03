@@ -25,7 +25,7 @@ public class ViewProfileServlet extends HttpServlet {
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         Ad ad = (Ad) request.getSession().getAttribute("ads");
-        DaoFactory.getAdsDao().userDelete(ad.getId());
+        request.setAttribute("ads",DaoFactory.getAdsDao().userDelete(ad.getId()));
     }
 }
 

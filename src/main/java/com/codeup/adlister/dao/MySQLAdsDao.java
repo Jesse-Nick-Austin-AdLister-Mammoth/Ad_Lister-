@@ -62,7 +62,7 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    public List<Ad> userDelete(Long id) { //allow user to delete ads from his profile page
+    public List<Ad> userDelete(long id) { //allow user to delete ads from his profile page
         PreparedStatement stmt = null;
         try {
             stmt = connection.prepareStatement("DELETE FROM ads where id = ?");
