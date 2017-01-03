@@ -1,4 +1,4 @@
-html, body {
+body {
     background-color: gray;
     color: ghostwhite;
     height: 100%;
@@ -25,4 +25,10 @@ h1#adsIndexHead {
 
 #adDescription {
     font-size: 1.75em;
+}
+
+#adsShowDescription {
+    float: right;
+    font-size: 3em;
+    margin-left: 50px;
 }

@@ -19,7 +19,7 @@
                 <div><img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="300" height="200"></div>
             </c:otherwise>
         </c:choose>
-        <div class="col-md-6"><p>${ad.description}</p></div>
+        <div id="adsShowDescription" class="col-md-6"><p>${ad.description}</p></div>
     </div>
 </div>
 </body>

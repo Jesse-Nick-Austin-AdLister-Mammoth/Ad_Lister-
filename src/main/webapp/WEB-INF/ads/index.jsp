@@ -12,7 +12,7 @@
 <div class="container">
     <h1 id="adsIndexHead">Viewing all items</h1>
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
+        <div id="adsIndexEach" class="col-md-6">
                 <a href="/ads/show?id=${ad.id}">
                     <c:choose>
                         <c:when test='${ad.url != null && ad.url.trim() != ""}'>
