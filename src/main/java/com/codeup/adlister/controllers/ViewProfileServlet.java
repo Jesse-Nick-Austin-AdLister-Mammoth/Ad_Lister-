@@ -4,6 +4,7 @@ import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.dao.MySQLAdsDao;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
+import javax.servlet.ServletException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,9 +24,11 @@ public class ViewProfileServlet extends HttpServlet {
         request.setAttribute("ads", DaoFactory.getAdsDao().userAll(user.getId()));
         request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Ad ad = (Ad) request.getSession().getAttribute("ad");
-        DaoFactory.getAdsDao().userDelete(ad.getId());
+        long AdID = Long.parseLong(request.getParameter("id"));
+        DaoFactory.getAdsDao().userDelete(AdID);
+        request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
 }
 
