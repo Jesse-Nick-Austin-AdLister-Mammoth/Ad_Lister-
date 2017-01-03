@@ -19,9 +19,15 @@
                 <div><img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="300" height="300"></div>
             </c:otherwise>
         </c:choose>
+
         <div class="col-md-6">
             <p>${ad.description}</p>
             <c:if test="${ad.categoryInt != null}"><p><strong>${categories.get(ad.categoryInt)}</strong></p></c:if>
+            <c:if test="${sessionScope.user.id == ad.userId}">
+                <div>
+                    <button>Delete</button>
+                </div>
+            </c:if>
         </div>
     </div>
 </div>
