@@ -17,11 +17,11 @@
                 <option value="${loop.index + 1}">${category.value}</option>
             </c:forEach>
         </select>
-        <button>Submit</button>
+        <button class="btn btn-success">Submit</button>
     </form>
     <h1 id="adsIndexHead">Viewing all items</h1>
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
+        <div class="col-md-6 adsIndexAd">
                 <a href="/ads/show?id=${ad.id}">
                     <c:choose>
                         <c:when test='${ad.url != null && ad.url.trim() != ""}'>

@@ -14,13 +14,25 @@ h1#indexHead {
 
 h1#adsIndexHead {
     font-size: 4em;
-    margin-top: 5%;
+    margin-top: .8em;
 }
 
 #adTitle {
-    font-size: 2.5em;
+    font-size: 3em;
+    padding-top: 5px;
+    padding-bottom: 3em;
 }
 
 #adDescription {
     font-size: 1.75em;
+    padding-top: 1em;
+}
+
+.showImage {
+    width: 400px;
+    height: 400px;
+}
+
+.adsIndexAd {
+    padding: 2em;
 }
