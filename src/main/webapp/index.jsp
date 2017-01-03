@@ -13,7 +13,6 @@
         <p class="text-center" id="indexText">
             Fence is a classified ad website dedicated to helping our users find the things they need now.
         </p>
-
     </div>
 </body>
 </html>

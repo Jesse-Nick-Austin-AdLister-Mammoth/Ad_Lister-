@@ -15,11 +15,13 @@
     <div>
         <h2>Here are your ads</h2>
         <c:forEach var="ad" items="${ads}">
+        <form action="/profile" method="post">
             <div class="col-md-6">
                 <h2><a href="/ads/show?id=${ad.id}">${ad.title}</a></h2>
                 <p>${ad.description}</p>
                 <input type="submit" value="Delete" class="btn-danger">
             </div>
+        </form>
         </c:forEach>
     </div>
 </div>

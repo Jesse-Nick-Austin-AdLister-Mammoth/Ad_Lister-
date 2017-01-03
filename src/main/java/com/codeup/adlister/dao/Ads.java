@@ -12,4 +12,5 @@ public interface Ads {
     List<Ad> userAll(long userId);
     List<Ad> search(String searchQuery);
     Ad singleAd(int adId);
+    List<Ad> userDelete(long id);
 }
