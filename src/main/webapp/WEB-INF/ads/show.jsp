@@ -20,6 +20,12 @@
             </c:otherwise>
         </c:choose>
         <div class="col-md-6"><p>${ad.description}</p></div>
+
+        <c:if test="${sessionScope.user.id == ad.userId}">
+                <div>
+                    <button>Delete</button>
+                </div>
+        </c:if>
     </div>
 </div>
 </body>
