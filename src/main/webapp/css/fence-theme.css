@@ -7,6 +7,11 @@ a {
     color: lightblue;
 }
 
+#welcomeText {
+    padding-bottom: .25em;
+    font-size: 5em;
+}
+
 h1#indexHead {
     margin-top: 15%;
     font-size: 5em;
