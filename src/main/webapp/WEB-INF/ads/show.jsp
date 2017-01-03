@@ -8,12 +8,11 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
-<div class="container">
     <div class="col-md-12">
         <div><h2>${ad.title}</h2></div>
         <c:choose>
             <c:when test='${ad.url != null && ad.url.trim() != ""}'>
-                <div><img class="img-rounded" src="${ad.url}" alt="${ad.title}" width="300" height="300"></div>
+                <div><img class="img-rounded" src="${ad.url}" alt="${ad.title}" id="showImage"></div>
             </c:when>
             <c:otherwise>
                 <div><img class="img-rounded" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="300" height="300"></div>
@@ -25,11 +24,10 @@
             <c:if test="${ad.categoryInt != null}"><p><strong>${categories.get(ad.categoryInt)}</strong></p></c:if>
             <c:if test="${sessionScope.user.id == ad.userId}">
                 <div>
-                    <button>Delete</button>
+                    <button class="btn btn-danger">Delete</button>
                 </div>
             </c:if>
         </div>
     </div>
-</div>
 </body>
 </html>

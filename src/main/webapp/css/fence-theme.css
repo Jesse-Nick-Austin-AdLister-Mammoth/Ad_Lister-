@@ -24,3 +24,8 @@ h1#adsIndexHead {
 #adDescription {
     font-size: 1.75em;
 }
+
+#showImage {
+    width: 50px;
+    height: 50px;
+}
