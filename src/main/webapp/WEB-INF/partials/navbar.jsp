@@ -10,8 +10,8 @@
             <div class="input-group">
                 <input type="text" class="form-control" name="searchQuery" id="searchQuery" placeholder="Search for...">
                 <span class="input-group-btn">
-                            <button class="btn btn-default" type="submit">Go!</button>
-                        </span>
+                    <button class="btn btn-default" type="submit">Go!</button>
+                </span>
             </div>
         </form>
         <ul class="nav navbar-nav navbar-right">

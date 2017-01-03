@@ -10,6 +10,15 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
 <div class="container">
+    <form action="/cat" method="get">
+        <select name="searchCat">
+            <option value="0" disabled>Search by Category</option>
+            <c:forEach var="category" items="${categories}" varStatus="loop">
+                <option value="${loop.index + 1}">${category.value}</option>
+            </c:forEach>
+        </select>
+        <button>Submit</button>
+    </form>
     <h1 id="adsIndexHead">Viewing all items</h1>
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
@@ -28,7 +37,6 @@
                 </a>
             <p id="adDescription">${ad.description}</p>
         </div>
-
     </c:forEach>
 </div>
 
