@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -23,6 +24,12 @@
                 <div id="description-help" class="help-block with-errors"></div>
             </div>
             <div id="filepicker" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-picture"></span> Pick file</div>
+            <select name="category">
+                <option value="0" disabled>Select a Category</option>
+                <c:forEach var="category" items="${categories}" varStatus="loop">
+                    <option value="${loop.index + 1}">${category.value}</option>
+                </c:forEach>
+            </select>
             <input type="hidden" name="fileurl" id="fileurl">
             <input id="submit" type="submit" data-disable="" class="btn btn-block btn-primary">
         </form>

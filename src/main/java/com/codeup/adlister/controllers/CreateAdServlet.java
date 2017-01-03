@@ -1,6 +1,7 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.dao.MySQLAdsDao;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 
@@ -14,6 +15,7 @@ import java.io.IOException;
 @WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/ads/create")
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("categories", DaoFactory.getAdsDao().getCategories());
         if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/login");
             return;
@@ -30,13 +32,15 @@ public class CreateAdServlet extends HttpServlet {
                     user.getId(),
                     request.getParameter("title"),
                     request.getParameter("description"),
-                    request.getParameter("fileurl")
+                    request.getParameter("fileurl"),
+                    Integer.valueOf(request.getParameter("category"))
             );
         } else {
             ad = new Ad(
                     user.getId(),
                     request.getParameter("title"),
-                    request.getParameter("description")
+                    request.getParameter("description"),
+                    Integer.valueOf(request.getParameter("category"))
             );
         }
         DaoFactory.getAdsDao().insert(ad);

@@ -9,11 +9,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.AdsIndexServlet", urlPatterns = "/ads")
-public class AdsIndexServlet extends HttpServlet {
+@WebServlet(name = "controllers.CategoryServlet", urlPatterns = "/cat")
+public class CategoryServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int query = Integer.valueOf(request.getParameter("searchCat"));
         request.setAttribute("categories", DaoFactory.getAdsDao().getCategories());
-        request.setAttribute("ads", DaoFactory.getAdsDao().all());
+        request.setAttribute("ads", DaoFactory.getAdsDao().searchCat(query));
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
+
     }
 }
