@@ -17,7 +17,7 @@
                 <option value="${loop.index + 1}">${category.value}</option>
             </c:forEach>
         </select>
-        <button>Submit</button>
+        <button class="btn btn-success">Submit</button>
     </form>
     <h1 id="adsIndexHead">Viewing all items</h1>
     <c:forEach var="ad" items="${ads}">
