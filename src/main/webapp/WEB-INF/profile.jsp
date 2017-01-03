@@ -18,7 +18,7 @@
             <div class="col-md-6">
                 <h2><a href="/ads/show?id=${ad.id}">${ad.title}</a></h2>
                 <p>${ad.description}</p>
-                <button class="btn-danger">Delete</button>
+                <input type="submit" value="Delete" class="btn-danger">
             </div>
         </c:forEach>
     </div>
