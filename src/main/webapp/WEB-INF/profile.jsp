@@ -37,9 +37,8 @@
                 <div>
                     <form action="/delete" method="post">
                         <input hidden type="text" name="id" value="${ad.id}">
-                        <button>Delete</button>
+                        <button class="btn btn-primary">Delete</button>
                     </form>
-                    <a class="btn btn-default btn-xs" href="#" role="button">Edit</a>
                 </div>
             </div>
 

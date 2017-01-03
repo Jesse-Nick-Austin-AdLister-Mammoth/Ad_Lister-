@@ -31,6 +31,8 @@ public class ListAdsDao implements Ads {
     public List<Ad> search(String searchQuery){return null;}
 
     @Override
+    public void update(Ad ad) {}
+    @Override
     public List<Ad> userAll(long userId) {
         return null;
     }

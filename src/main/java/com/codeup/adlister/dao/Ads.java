@@ -16,4 +16,5 @@ public interface Ads {
     Ad singleAd(int adId);
     List<Ad> searchCat(int query);
     void userDelete(int id);
+    void update(Ad ad);
 }
