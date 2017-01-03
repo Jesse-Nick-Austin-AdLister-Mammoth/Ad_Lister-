@@ -1,6 +1,7 @@
-body {
+html, body {
     background-color: gray;
-    color: ghostwhite;;
+    color: ghostwhite;
+    height: 100%;
 }
 
 a {
