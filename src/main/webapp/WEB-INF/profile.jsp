@@ -35,7 +35,7 @@
                 <p>${ad.description}</p>
 
                 <div>
-                    <button>Delete</button>
+                    <button class="btn btn-danger">Delete</button>
                 </div>
             </div>
 
