@@ -36,6 +36,7 @@
 
                 <div>
                     <button>Delete</button>
+                    <button>Edit</button>
                 </div>
             </div>
 
