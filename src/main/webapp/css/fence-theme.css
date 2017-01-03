@@ -19,10 +19,12 @@ h1#adsIndexHead {
 
 #adTitle {
     font-size: 2.5em;
+    padding-top: 5px;
 }
 
 #adDescription {
     font-size: 1.75em;
+    padding-top: 3em;
 }
 
 #showImage {
