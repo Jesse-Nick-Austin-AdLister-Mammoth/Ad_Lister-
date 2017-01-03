@@ -29,7 +29,11 @@
             <c:if test="${ad.categoryInt != null && ad.categoryInt != 0}"><p><strong>${categories.get(ad.categoryInt)}</strong></p></c:if>
             <c:if test="${sessionScope.user.id == ad.userId}">
                 <div>
-                    <button>Delete</button>
+                    <form action="/delete" method="post">
+                        <input hidden type="text" name="id" value="${ad.id}">
+                        <button>Delete</button>
+                    </form>
+
                     <a class="btn btn-default btn-xs" href="#" role="button">Edit</a>
                 </div>
             </c:if>

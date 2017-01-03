@@ -93,12 +93,13 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    public void userDelete(Long id) { //allow user to delete ads from his profile page
+    @Override
+    public void userDelete(int id) { //allow user to delete ads from his profile page
         PreparedStatement stmt = null;
         try {
             stmt = connection.prepareStatement("DELETE FROM ads where id = ?");
             stmt.setLong(1,id);
-            ResultSet rs = stmt.executeQuery();
+            stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error deleting this ad");
         }
