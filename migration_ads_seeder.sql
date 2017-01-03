@@ -1,5 +1,4 @@
 # Before running! Have at least one user created
-
 TRUNCATE ads;
 TRUNCATE categories;
 
