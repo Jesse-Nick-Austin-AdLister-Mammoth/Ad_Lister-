@@ -22,7 +22,7 @@
 
         <div class="col-md-6">
             <p>${ad.description}</p>
-            <c:if test="${ad.categoryInt != null}"><p><strong>${categories.get(ad.categoryInt)}</strong></p></c:if>
+            <c:if test="${ad.categoryInt != null && ad.categoryInt != 0}"><p><strong>${categories.get(ad.categoryInt)}</strong></p></c:if>
             <c:if test="${sessionScope.user.id == ad.userId}">
                 <div>
                     <button>Delete</button>
