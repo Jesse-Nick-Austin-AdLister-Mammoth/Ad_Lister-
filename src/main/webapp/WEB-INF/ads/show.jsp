@@ -9,7 +9,9 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
-    <div class="col-md-12">
+<div class="container">
+    <div class="row">
+    <div class="col-md-6">
         <div><h2>${ad.title}</h2></div>
         <div>
         <c:choose>
@@ -32,5 +34,7 @@
             </c:if>
         </div>
     </div>
+    </div>
+</div>
 </body>
 </html>
