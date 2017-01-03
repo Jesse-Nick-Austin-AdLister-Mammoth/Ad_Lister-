@@ -2,6 +2,7 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 
+import java.util.HashMap;
 import java.util.List;
 
 public interface Ads {
@@ -11,5 +12,7 @@ public interface Ads {
     Long insert(Ad ad);
     List<Ad> userAll(long userId);
     List<Ad> search(String searchQuery);
+    HashMap<Integer, String> getCategories();
     Ad singleAd(int adId);
+    List<Ad> searchCat(int query);
 }

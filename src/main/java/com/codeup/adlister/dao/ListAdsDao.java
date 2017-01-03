@@ -3,6 +3,7 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class ListAdsDao implements Ads {
@@ -38,6 +39,12 @@ public class ListAdsDao implements Ads {
     public Ad singleAd(int adId) {
         return null;
     }
+
+    @Override
+    public HashMap<Integer, String> getCategories() {return null;}
+
+    @Override
+    public List<Ad> searchCat(int query){return null;}
 
 
     private List<Ad> generateAds() {

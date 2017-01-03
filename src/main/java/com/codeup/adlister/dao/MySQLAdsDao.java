@@ -5,6 +5,7 @@ import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads {
@@ -50,6 +51,20 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public List<Ad> searchCat(int query) {
+        PreparedStatement stmt = null;
+        try {
+            String sql = "SELECT * FROM ads WHERE category = ?";
+            stmt = connection.prepareStatement(sql);
+            stmt.setInt(1, query);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving ads.", e);
+        }
+    }
+
     public List<Ad> userAll(long userId) { // used to display user ads on user profile
         PreparedStatement stmt = null;
         try {
@@ -59,6 +74,22 @@ public class MySQLAdsDao implements Ads {
             return createAdsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving your ads");
+        }
+    }
+
+    @Override
+    public HashMap<Integer, String> getCategories(){
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM categories");
+            ResultSet rs = stmt.executeQuery();
+            HashMap<Integer, String> toReturn = new HashMap<>();
+            while(rs.next()){
+                toReturn.put(rs.getInt(1), rs.getString(2));
+            }
+            return toReturn;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding categories");
         }
     }
 
@@ -80,12 +111,13 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO ads(user_id, title, description, imgpath) VALUES (?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO ads(user_id, title, description, imgpath, category) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
             stmt.setString(4, ad.getUrl());
+            stmt.setInt(5, ad.getCategoryInt());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -102,7 +134,8 @@ public class MySQLAdsDao implements Ads {
                 rs.getLong("user_id"),
                 rs.getString("title"),
                 rs.getString("description"),
-                    rs.getString("imgpath")
+                rs.getString("imgpath"),
+                rs.getInt("category")
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error in extractAd", e);

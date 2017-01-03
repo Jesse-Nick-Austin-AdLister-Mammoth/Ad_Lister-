@@ -6,6 +6,8 @@ public class Ad {
     private String title;
     private String description;
     private String url;
+    private int categoryInt;
+    private String category;
 
 
     public String getUrl() {
@@ -17,6 +19,14 @@ public class Ad {
         this.userId = userId;
         this.title = title;
         this.description = description;
+    }
+
+    public Ad(long userId, String title, String description, int category) {
+        this.id = id;
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.categoryInt = category;
     }
 
     public Ad(long id, long userId, String title, String description, String url) {
@@ -32,6 +42,23 @@ public class Ad {
         this.title = title;
         this.description = description;
         this.url = url;
+    }
+
+    public Ad(long id, long userId, String title, String description, String url, int category) {
+        this.id = id;
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.url = url;
+        this.categoryInt = category;
+    }
+
+    public Ad(long userId, String title, String description, String url, int category) {
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.url = url;
+        this.categoryInt = category;
     }
 
     public Ad(long userId, String title, String description) {
@@ -70,5 +97,24 @@ public class Ad {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getCategoryInt() {
+        return categoryInt;
+    }
+    public void setCategoryInt(int category) {
+        this.categoryInt = category;
+    }
+//    public String getCategory(){
+//        if(category != null){
+//            return category;
+//        } else if (categoryInt == 0){
+//            return null;
+//        } else {
+//
+//        }
+//    }
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
