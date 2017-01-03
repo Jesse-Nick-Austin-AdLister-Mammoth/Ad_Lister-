@@ -11,7 +11,7 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1 id="indexHead" class="text-center">Welcome to Fence</h1>
-        <p id="indexText">
+        <p class="text-center" id="indexText">
             Fence is a classified ad website dedicated to helping our users find the things they need now.
         </p>
 
