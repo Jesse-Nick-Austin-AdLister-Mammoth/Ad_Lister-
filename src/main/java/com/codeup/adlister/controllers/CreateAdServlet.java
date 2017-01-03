@@ -27,22 +27,40 @@ public class CreateAdServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
         Ad ad;
-        if(request.getParameter("fileurl") != null && !request.getParameter("fileurl").equals("")) {
-            ad = new Ad(
-                    user.getId(),
-                    request.getParameter("title"),
-                    request.getParameter("description"),
-                    request.getParameter("fileurl"),
-                    Integer.valueOf(request.getParameter("category"))
-            );
+        if(Integer.valueOf(request.getParameter("category")) != 0){
+            if(request.getParameter("fileurl") != null && !request.getParameter("fileurl").equals("")) {
+                ad = new Ad(
+                        user.getId(),
+                        request.getParameter("title"),
+                        request.getParameter("description"),
+                        request.getParameter("fileurl"),
+                        Integer.valueOf(request.getParameter("category"))
+                );
+            } else {
+                ad = new Ad(
+                        user.getId(),
+                        request.getParameter("title"),
+                        request.getParameter("description"),
+                        Integer.valueOf(request.getParameter("category"))
+                );
+            }
         } else {
-            ad = new Ad(
-                    user.getId(),
-                    request.getParameter("title"),
-                    request.getParameter("description"),
-                    Integer.valueOf(request.getParameter("category"))
-            );
+            if(request.getParameter("fileurl") != null && !request.getParameter("fileurl").equals("")) {
+                ad = new Ad(
+                        user.getId(),
+                        request.getParameter("title"),
+                        request.getParameter("description"),
+                        request.getParameter("fileurl")
+                );
+            } else {
+                ad = new Ad(
+                        user.getId(),
+                        request.getParameter("title"),
+                        request.getParameter("description")
+                );
+            }
         }
+
         DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/ads");
     }

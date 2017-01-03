@@ -12,7 +12,7 @@
 <div class="container">
     <form action="/cat" method="get">
         <select name="searchCat">
-            <option value="0" disabled>Search by Category</option>
+            <option value="0" selected disabled>Search by Category</option>
             <c:forEach var="category" items="${categories}" varStatus="loop">
                 <option value="${loop.index + 1}">${category.value}</option>
             </c:forEach>
