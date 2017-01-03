@@ -15,4 +15,5 @@ public interface Ads {
     HashMap<Integer, String> getCategories();
     Ad singleAd(int adId);
     List<Ad> searchCat(int query);
+    void userDelete(int id);
 }
